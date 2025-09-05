@@ -7,7 +7,7 @@ This is a sample Model Context Protocol (MCP) server designed to work with ChatG
 - **Search Tool**: Semantic search using OpenAI Vector Store API
 - **Fetch Tool**: Complete document retrieval by ID with full content and metadata
 - **Sample Data**: Includes 5 sample documents covering various technical topics
-- **MCP Compliance**: Follows OpenAI's MCP specification for deep research integration
+- **MCP Compliance**: Follows [OpenAI's MCP specification](https://platform.openai.com/docs/mcp#test-and-connect-your-mcp-server) for deep research integration
 
 ## Usage
 
@@ -29,7 +29,7 @@ Update `app/mcp/route.ts` with your tools, prompts, and resources following the 
 
 ## Connecting to ChatGPT Deep Research
 
-1. **Access ChatGPT Settings**: Go to ChatGPT settings @https://chatgpt.com/#settings 
+1. **Access ChatGPT Settings**: Go to [ChatGPT settings](https://chatgpt.com/#settings) 
 2. **Navigate to Connectors**: Click on the "Connectors" tab
 3. **Add MCP Server**: Add your server URL: `http://your-domain/mcp`
 4. **Test Connection**: The server should appear as available for deep research
