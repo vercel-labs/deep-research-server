@@ -42,6 +42,10 @@ const handler = createMcpHandler(
       {
         query: z.string().describe("Search query string. Natural language queries work best for semantic search."),
       },
+      {
+        title: 'Search documents',
+        readOnlyHint: true,
+      },
       async ({ query }) => {
         if (!query || !query.trim()) {
           return {
@@ -80,6 +84,10 @@ const handler = createMcpHandler(
       "Retrieve complete document content by ID for detailed analysis and citation. This tool fetches the full document content from the document store. Use this after finding relevant documents with the search tool to get complete information for analysis and proper citation.",
       {
         id: z.string().describe("Document ID from search results (e.g., doc_1, doc_2, etc.)"),
+      },
+      {
+        title: 'Fetch document',
+        readOnlyHint: true,
       },
       async ({ id }) => {
         if (!id) {
